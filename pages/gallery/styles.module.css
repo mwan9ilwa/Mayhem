@@ -1,0 +1,8 @@
+.section {
+  margin-bottom: var(--space-xl);
+}
+
+.section > p {
+  max-width: 32rem;
+  margin: var(--space) 0;
+}

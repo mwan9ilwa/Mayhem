@@ -1,0 +1,75 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* .intro a {
+  font-weight: 550;
+} */
+
+.section {
+  margin-bottom: var(--space-xl);
+}
+
+.section > p {
+  max-width: 32rem;
+  margin: var(--space) 0;
+}
+
+.section > a {
+  font-weight: 550;
+}
+
+.hello {
+  /* This rule is needed because
+  spans are an inline element
+  which means they do not respect
+  the width property which stops
+  framer motion from animating */
+  display: inline-flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.profilewrapper {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  flex: 1;
+  margin: var(--space-lg) auto;
+}
+
+.profile {
+  width: 8rem;
+  height: auto;
+  border-radius: var(--radius-full);
+}
+
+.experiences {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.stackwrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+}
+
+@media screen and (max-width: 868px) {
+  .intro {
+    flex-direction: column;
+    gap: 0;
+  }
+  .experiences {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profilewrapper {
+    align-items: flex-start;
+  }
+}
