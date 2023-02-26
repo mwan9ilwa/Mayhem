@@ -5,7 +5,7 @@ export default function Snippets() {
   return (
     <>
       <Head>
-        <title>Rajbir Johar | Snippets</title>
+        <title>Bill | Snippets</title>
       </Head>
       <header>
         <h1>Snippets</h1>
