@@ -26,7 +26,7 @@ function Menu(props: { onClick?: () => void }): JSX.Element {
         onClick={props.onClick}
         label="Navigate to the chapters page to read some of my writings."
       >
-        Chapters
+        Journals
       </Focused>
       <Focused
         href="/projects"

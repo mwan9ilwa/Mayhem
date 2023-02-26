@@ -18,28 +18,28 @@ export default function Footer() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={"https://github.com/rajbirjohar"}
+                href={"https://github.com/mwan9ilwa"}
               >
                 Github
               </a>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={"https://www.linkedin.com/in/rajbirjohar/"}
+                href={"https://www.linkedin.com/in/mwan9ilwa_/"}
               >
                 LinkedIn
               </a>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={"https://www.instagram.com/rajbir.johar/"}
+                href={"https://www.instagram.com/mwan9ilwa_/"}
               >
                 Instagram
               </a>
               <Link href="/">Home</Link>
             </div>
             <div className={css.links}>
-              <Link href="/chapters">Chapters</Link>
+              <Link href="/chapters">Journals</Link>
               <Link href="/projects">Projects</Link>
               <Link href="/about">About</Link>
               <Link href="/experiences">Experiences</Link>

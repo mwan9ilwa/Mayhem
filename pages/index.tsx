@@ -111,7 +111,7 @@ function Hello(props: { index: number }) {
               {greetings[props.index]}.&nbsp;
             </motion.span>
           </AnimatePresence>
-          <motion.span>I&#39;m Rajbir.</motion.span>
+          <motion.span>I&#39;m Bill.</motion.span>
         </LayoutGroup>
       </h1>
     </header>
@@ -144,7 +144,7 @@ export default function Home(props: { chapters: Chapter[] }) {
   return (
     <>
       <Head>
-        <title>Rajbir Johar</title>
+        <title>MZ</title>
         <meta
           content="A brief overview of different aspects of my career"
           name="description"
@@ -166,7 +166,7 @@ export default function Home(props: { chapters: Chapter[] }) {
           </div>
           {render && <Hello index={index} />}
           <p>
-            Frontend and UX Engineer at Inventives. Crafting aesthetic
+            Frontend and Google Cloud Engineer at Nest Interactive. Crafting aesthetic
             interfaces for mindblowing ideas.
           </p>
           <Link
