@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Rajbir Johar | Projects</title>
+        <title>Mayhem | Projects</title>
         <meta content="All my open source projects hosted on Github" name="description" />
       </Head>
       <header>

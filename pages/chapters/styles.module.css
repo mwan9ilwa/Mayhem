@@ -7,12 +7,12 @@
 }
 
 .section > p {
-  max-width: 32rem;
+  max-width: 64rem;
   margin: var(--space) 0;
 }
 
 .searchwrapper {
-  max-width: 32rem;
+  max-width: 64rem;
   width: 100%;
   border: var(--border);
   border-radius: 48px;
@@ -53,7 +53,7 @@
 }
 
 .chapter {
-  max-width: 32rem;
+  max-width: 64rem;
 }
 
 .chapter .content *,

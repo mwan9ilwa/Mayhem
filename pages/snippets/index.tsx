@@ -5,13 +5,12 @@ export default function Snippets() {
   return (
     <>
       <Head>
-        <title>Bill | Snippets</title>
+        <title>Mayhem | Resume</title>
       </Head>
       <header>
-        <h1>Snippets</h1>
+        <h1>Resume</h1>
         <p>
-          Short pieces of code or components that I&#39;ve acquired over the
-          years and use often.
+          Coming soon!...
         </p>
         <em>Stay tuned.</em>
       </header>

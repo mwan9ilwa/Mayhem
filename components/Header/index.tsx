@@ -26,7 +26,7 @@ function Menu(props: { onClick?: () => void }): JSX.Element {
         onClick={props.onClick}
         label="Navigate to the chapters page to read some of my writings."
       >
-        Journals
+        Blog
       </Focused>
       <Focused
         href="/projects"
@@ -37,11 +37,11 @@ function Menu(props: { onClick?: () => void }): JSX.Element {
       </Focused>
 
       <Focused
-        href="/gallery"
+        href="/experiences"
         onClick={props.onClick}
         label="Navigate to the gallery page to view some of my photography."
       >
-        Gallery
+        Timeline
       </Focused>
       <Focused
         href="/about"

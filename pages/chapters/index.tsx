@@ -50,7 +50,7 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
   return (
     <>
       <Head>
-        <title>Rajbir Johar | Chapters</title>
+        <title>Mayhem | Chapters</title>
         <meta
           content="My thoughts on different topics relating to mainly developer experiences"
           name="description"
@@ -65,7 +65,7 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
           </Link>
         )}
         <h1>
-          Chapters {query && <span className={css.filtertag}>on {query}</span>}
+          My Activities {query && <span className={css.filtertag}>on {query}</span>}
         </h1>
       </header>
       <div className={css.section}>

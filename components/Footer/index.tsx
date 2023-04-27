@@ -18,9 +18,16 @@ export default function Footer() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
+                href={"https://g.dev/mwan9ilwa/"}
+              >
+                Google Developers
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href={"https://github.com/mwan9ilwa"}
               >
-                Github
+                GitHub
               </a>
               <a
                 target="_blank"
@@ -32,30 +39,26 @@ export default function Footer() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={"https://www.instagram.com/mwan9ilwa_/"}
+                href={"https://www.twitter.com/mwan9ilwa_/"}
               >
-                Instagram
+                Twitter
               </a>
-              <Link href="/">Home</Link>
             </div>
             <div className={css.links}>
-              <Link href="/chapters">Journals</Link>
-              <Link href="/projects">Projects</Link>
-              <Link href="/about">About</Link>
-              <Link href="/experiences">Experiences</Link>
+            <Link href="/about">About</Link>
+              <Link href="/chapters">Activities</Link>
+              <Link href="/projects">Open Source</Link>
+              <Link href="/gallery">Gallery</Link>
             </div>
             <div className={css.links}>
               <Link href="/music">Music</Link>
-              <Link href="/snippets">Snippets</Link>
+              <Link href="/experiences">Resume</Link>
             </div>
           </div>
         </div>
         {data ? (
           <p className={css.lastupdated}>
-            Last updated{" "}
-            {formatDistance(new Date(data.lastUpdated), new Date(), {
-              addSuffix: true,
-            })}
+            © {new Date().getFullYear()} Mwangilwa{" "}
           </p>
         ) : (
           <></>

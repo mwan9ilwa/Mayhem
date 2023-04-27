@@ -13,7 +13,7 @@
 }
 
 .section > p {
-  max-width: 32rem;
+  max-width: 64rem;
   margin: var(--space) 0;
 }
 
@@ -41,9 +41,9 @@
 }
 
 .profile {
-  width: 8rem;
+  width: 20rem;
   height: auto;
-  border-radius: var(--radius-full);
+  border-radius: 1rem;
 }
 
 .experiences {
