@@ -28,7 +28,7 @@ const PostLayout = ({ chapter }: { chapter: Chapter }) => {
   return (
     <>
       <Head>
-        <title>Rajbir Johar | {chapter.title}</title>
+        <title>Mwangilwa | {chapter.title}</title>
         <meta content={chapter.description} name="description" />
         <meta property="article:published_time" content={chapter.date} />
         <meta name="keywords" content={chapter.tags.toString()} />

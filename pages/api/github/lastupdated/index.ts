@@ -10,7 +10,7 @@ export default async function handler(
   });
 
   //Last updated request
-  const portfolio = await octokit.request("/repos/rajbirjohar/alpine");
+  const portfolio = await octokit.request("/repos/mwan9ilwa/Mayhem");
   const lastUpdated = portfolio.data.pushed_at;
 
   //return

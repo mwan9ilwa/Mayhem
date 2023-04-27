@@ -1,4 +1,4 @@
-import supabase from "@/lib/supabase/public";
+// import supabase from "@/lib/supabase/public";
 import Head from "next/head";
 import css from "./styles.module.css";
 import { useState } from "react";
@@ -19,7 +19,7 @@ export default function GalleryPage(props: { photos: Photo[] }) {
   return (
     <>
       <Head>
-        <title>Rajbir Johar | Gallery</title>
+        <title>Mayhem | Gallery</title>
         <meta
           content="Some of my best photos that I've captured with my camera."
           name="description"
@@ -40,7 +40,7 @@ export default function GalleryPage(props: { photos: Photo[] }) {
             Instagram
           </a>
           .
-        </p>
+        </p>        
         <Expanded photo={selected} setPhoto={setSelected} />
         <Gallery photos={photos} setPhoto={setSelected} />
       </div>
@@ -48,23 +48,26 @@ export default function GalleryPage(props: { photos: Photo[] }) {
   );
 }
 
-export async function getStaticProps() {
-  // Select all photos from the bucket
-  const data = await supabase.storage.from("gallery").list("photos");
 
-  // Extract the file name and generate a public url for each photo
 
-  let photos: { name: string; date: Date; url: string }[] = [];
-  data.data?.map((path) => {
-    const url = supabase.storage
-      .from("gallery")
-      .getPublicUrl(`photos/${path.name}`).data.publicUrl;
-    photos.push({
-      name: path.name,
-      date: path.metadata.lastModified || path.created_at,
-      url: url,
-    });
-  });
 
-  return { props: { photos } };
-}
+// export async function getStaticProps() {
+//   // Select all photos from the bucket
+//   const data = await supabase.storage.from("gallery").list("photos");
+
+//   // Extract the file name and generate a public url for each photo
+
+//   let photos: { name: string; date: Date; url: string }[] = [];
+//   data.data?.map((path) => {
+//     const url = supabase.storage
+//       .from("gallery")
+//       .getPublicUrl(`photos/${path.name}`).data.publicUrl;
+//     photos.push({
+//       name: path.name,
+//       date: path.metadata.lastModified || path.created_at,
+//       url: url,
+//     });
+//   });
+
+//   return { props: { photos } };
+// }
