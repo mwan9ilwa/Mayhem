@@ -32,7 +32,7 @@ export default function Footer() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={"https://www.linkedin.com/in/mwan9ilwa_/"}
+                href={"https://www.linkedin.com/in/mwan9ilwa/"}
               >
                 LinkedIn
               </a>
