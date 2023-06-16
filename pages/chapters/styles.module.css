@@ -157,3 +157,11 @@
     fill: var(--forest-dark);
   }
 }
+
+.image-container {
+  float: left;
+  margin-right: 20px;
+}
+.text-container {
+  text-align: right;
+}

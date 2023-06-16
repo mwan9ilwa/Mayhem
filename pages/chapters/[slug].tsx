@@ -54,7 +54,7 @@ const PostLayout = ({ chapter }: { chapter: Chapter }) => {
         <header>
           <p className={css.badge}>{chapter.category}</p>
           <h1>{chapter.title}</h1>
-          <p className={css.author}>
+          {/* <p className={css.author}>
             {chapter.author}
             <Divider />
             <time dateTime={chapter.date} suppressHydrationWarning>
@@ -62,21 +62,21 @@ const PostLayout = ({ chapter }: { chapter: Chapter }) => {
             </time>
             <Divider />
             <Views slug={chapter.slug} />
-          </p>
+          </p> */}
         </header>
         <hr />
         <div className={css.content}>
           <MDXContent components={{ MyButton }} />
         </div>
-        <div className={css.sticky}>
+        {/* <div className={css.sticky}>
           <LikeButton slug={chapter.slug} />
-        </div>
+        </div> */}
         <hr />
         <footer>
-          <div className={css.signature}>
+          {/* <div className={css.signature}>
             <Signature />
             <cite>— {chapter.author}</cite>
-          </div>
+          </div> */}
           <h4>Related</h4>
           <div className={css.tags}>
             {chapter.tags.map((tag: string) => (
@@ -91,7 +91,7 @@ const PostLayout = ({ chapter }: { chapter: Chapter }) => {
                 shallow
                 replace
               >
-                #{tag}&nbsp;
+                From{tag}&nbsp;
               </Link>
             ))}
           </div>
