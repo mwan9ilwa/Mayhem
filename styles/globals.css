@@ -24,6 +24,8 @@
   --start: 0ms;
 
   /* Colors */
+  
+/* Light Mode*/
   --hue: 200;
 
   --paper-0: hsl(var(--hue) 0% 98%);
@@ -44,17 +46,17 @@
   --card-bg: var(--paper-1);
   --border: 2px solid var(--paper-2);
 
-  --forest-dark: hsl(var(--hue) 28% 15%);
-  --forest: hsl(var(--hue) 28% 41%);
-  --forest-light: hsl(var(--hue) 28% 75%);
+  --forest-dark: #1E466B;
+  --forest: #007ACC;
+  --forest-light: #007ACC;
 
   --gradient: linear-gradient(
       217deg,
       rgba(255, 0, 0, 0.8),
       rgba(255, 0, 0, 0) 70.71%
     ),
-    linear-gradient(127deg, rgba(5, 155, 5, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    linear-gradient(127deg, rgba(5, 155, 5, 0.8), rgba(0, 255, 0, 0) ),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(128, 128, 192, 0) );
 
   /* Spacing */
   --space-2xs: 0.125rem;
@@ -94,6 +96,7 @@
   --font-serif: "Newsreader", serif;
 }
 
+/* Dark Mode*/
 [data-theme="dark"] {
   /* Colors */
   --hue: 10;
@@ -110,15 +113,15 @@
   --paper-1: hsl(var(--hue) 0% 6%);
   --paper-0: hsl(var(--hue) 0% 3%);
 
-  --bg: var(--paper-0);
-  --fg: var(--paper-7);
+  --bg: var(--paper-2);
+  --fg: var(--paper-9);
   --header-bg: var(--paper-0);
   --card-bg: var(--paper-1);
   --border: 2px solid var(--paper-2);
 
-  --forest-dark: hsl(var(--hue) 100% 80%);
-  --forest: hsl(var(--hue) 100% 60%);
-  --forest-light: hsl(var(--hue) 70% 15%);
+  --forest-dark: #eff2f5;
+  --forest: #007ACC;
+  --forest-light: #007ACC;
 
   --gradient: linear-gradient(
       217deg,
@@ -217,7 +220,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 650;
+  font-weight: 550;
   color: var(--paper-10);
 }
 

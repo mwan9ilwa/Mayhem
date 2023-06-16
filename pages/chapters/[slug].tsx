@@ -12,15 +12,26 @@ import Signature from "@/components/Signature";
 import LikeButton from "../../components/Chapters/Likes/LikeButton/index";
 import Divider from "@/components/Divider";
 
+// function MyButton() {
+//   const [clicks, setClicks] = useState(0);
+
+//   return (
+//     <button onClick={() => setClicks(clicks + 1)} className={css.button}>
+//       Clicked me {clicks} times
+//     </button>
+//   );
+// }
+
 function MyButton() {
-  const [clicks, setClicks] = useState(0);
+  const email = "mwangilwa@mpelembe.net";
 
   return (
-    <button onClick={() => setClicks(clicks + 1)} className={css.button}>
-      Clicked me {clicks} times
-    </button>
+    <a href={`mailto:${email}`} className={css.button}>
+      Click here to email me
+    </a>
   );
 }
+
 
 const PostLayout = ({ chapter }: { chapter: Chapter }) => {
   const MDXContent = useMDXComponent(chapter.body.code);

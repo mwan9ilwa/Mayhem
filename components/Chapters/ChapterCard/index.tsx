@@ -36,13 +36,13 @@ export default function ChapterCard(props: {
           <ul className={css.tags}>
             {props.chapter.tags.map((tag: string) => (
               <li key={tag} className={css.tag}>
-                #{tag}
+                From{tag}
               </li>
             ))}
           </ul>
           <div className={css.link}>
             <span>
-              Read <IconArrowRight className={css.icon} strokeWidth={2.5} />
+              Explore <IconArrowRight className={css.icon} strokeWidth={2.5} />
             </span>
             <time className={css.date} suppressHydrationWarning>
               {format(date, "M.d.yyyy")}

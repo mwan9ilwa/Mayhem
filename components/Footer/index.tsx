@@ -46,7 +46,7 @@ export default function Footer() {
             </div>
             <div className={css.links}>
             <Link href="/about">About</Link>
-              <Link href="/chapters">Activities</Link>
+              <Link href="/chapters">Services</Link>
               <Link href="/projects">Open Source</Link>
               <Link href="/gallery">Gallery</Link>
             </div>

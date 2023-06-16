@@ -65,11 +65,11 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
           </Link>
         )}
         <h1>
-          My Activities {query && <span className={css.filtertag}>on {query}</span>}
+          My Services {query && <span className={css.filtertag}>on {query}</span>}
         </h1>
       </header>
       <div className={css.section}>
-        <p>Here is where I type at the speed of thought.</p>
+        <p>Services I specialize in.</p>
         <div className={css.searchwrapper}>
           <IconSearch />
           <input
@@ -83,7 +83,7 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
           />
         </div>
         <div className={css.history}>
-          <h3>Revisit</h3>
+          <h3>All</h3>
           {Array.from(previousQueries)
             .slice(0, 10)
             .map((query) => (

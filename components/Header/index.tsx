@@ -26,14 +26,14 @@ function Menu(props: { onClick?: () => void }): JSX.Element {
         onClick={props.onClick}
         label="Navigate to the chapters page to read some of my writings."
       >
-        Blog
+        Services
       </Focused>
       <Focused
         href="/projects"
         onClick={props.onClick}
         label="Navigate to the projects page to learn more about my projects."
       >
-        Projects
+        GitHub
       </Focused>
 
       <Focused
