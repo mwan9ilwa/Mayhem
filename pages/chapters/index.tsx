@@ -50,7 +50,7 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
   return (
     <>
       <Head>
-        <title>Mayhem | Chapters</title>
+        <title>Services</title>
         <meta
           content="My thoughts on different topics relating to mainly developer experiences"
           name="description"
@@ -84,7 +84,7 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
         </div>
         <div className={css.history}>
           <h3>All</h3>
-          {Array.from(previousQueries)
+          {/* {Array.from(previousQueries)
             .slice(0, 10)
             .map((query) => (
               <Link
@@ -101,7 +101,7 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
               >
                 #{query}&nbsp;&nbsp;
               </Link>
-            ))}
+            ))} */}
         </div>
         <Chapters chapters={filteredChapters} />
       </div>
