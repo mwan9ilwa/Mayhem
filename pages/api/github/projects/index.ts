@@ -6,12 +6,12 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const headers = {
-    Authorization: "Token " + process.env.GITHUB_AUTH_TOKEN,
+    Authorization: "" + process.env.GITHUB_AUTH_TOKEN,
   };
 
   // projects
   const url =
-    "https://api.github.com/users/rajbirjohar/repos?sort=updated";
+    "https://api.github.com/users/mwan9ilwa/repos?sort=updated";
   const response = await fetch(url, { headers: headers });
   const json = await response.json();
   const projects: Project[] = [];

@@ -12,15 +12,26 @@ import Signature from "@/components/Signature";
 import LikeButton from "../../components/Chapters/Likes/LikeButton/index";
 import Divider from "@/components/Divider";
 
+// function MyButton() {
+//   const [clicks, setClicks] = useState(0);
+
+//   return (
+//     <button onClick={() => setClicks(clicks + 1)} className={css.button}>
+//       Clicked me {clicks} times
+//     </button>
+//   );
+// }
+
 function MyButton() {
-  const [clicks, setClicks] = useState(0);
+  const email = "mwangilwa@mpelembe.net";
 
   return (
-    <button onClick={() => setClicks(clicks + 1)} className={css.button}>
-      Clicked me {clicks} times
-    </button>
+    <a href={`mailto:${email}`} className={css.button}>
+      Click here to email me
+    </a>
   );
 }
+
 
 const PostLayout = ({ chapter }: { chapter: Chapter }) => {
   const MDXContent = useMDXComponent(chapter.body.code);
@@ -28,7 +39,7 @@ const PostLayout = ({ chapter }: { chapter: Chapter }) => {
   return (
     <>
       <Head>
-        <title>Rajbir Johar | {chapter.title}</title>
+        <title>Mwangilwa | {chapter.title}</title>
         <meta content={chapter.description} name="description" />
         <meta property="article:published_time" content={chapter.date} />
         <meta name="keywords" content={chapter.tags.toString()} />
@@ -43,7 +54,7 @@ const PostLayout = ({ chapter }: { chapter: Chapter }) => {
         <header>
           <p className={css.badge}>{chapter.category}</p>
           <h1>{chapter.title}</h1>
-          <p className={css.author}>
+          {/* <p className={css.author}>
             {chapter.author}
             <Divider />
             <time dateTime={chapter.date} suppressHydrationWarning>
@@ -51,21 +62,21 @@ const PostLayout = ({ chapter }: { chapter: Chapter }) => {
             </time>
             <Divider />
             <Views slug={chapter.slug} />
-          </p>
+          </p> */}
         </header>
         <hr />
         <div className={css.content}>
           <MDXContent components={{ MyButton }} />
         </div>
-        <div className={css.sticky}>
+        {/* <div className={css.sticky}>
           <LikeButton slug={chapter.slug} />
-        </div>
+        </div> */}
         <hr />
         <footer>
-          <div className={css.signature}>
+          {/* <div className={css.signature}>
             <Signature />
             <cite>— {chapter.author}</cite>
-          </div>
+          </div> */}
           <h4>Related</h4>
           <div className={css.tags}>
             {chapter.tags.map((tag: string) => (
@@ -80,7 +91,7 @@ const PostLayout = ({ chapter }: { chapter: Chapter }) => {
                 shallow
                 replace
               >
-                #{tag}&nbsp;
+                From{tag}&nbsp;
               </Link>
             ))}
           </div>

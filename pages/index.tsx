@@ -12,9 +12,9 @@ import Chapters from "@/components/Chapters";
 import ListExperiences from "@/components/Experiences";
 import Playing from "@/components/Music/Playing";
 import me from "@/public/static/images/me.jpg";
-import horseshoe from "@/public/static/images/horseshoe.jpg";
-import route243 from "@/public/static/images/route243.jpg";
-import anthem from "@/public/static/images/anthem.jpg";
+import plex from "@/public/static/images/plex.jpg";
+import govtplex from "@/public/static/images/govtplex.jpg";
+import anthem from "@/public/static/images/me.jpg";
 import Stack from "@/components/Stack";
 import ListProjects from "@/components/Projects";
 
@@ -22,40 +22,21 @@ const greetings = [
   "Hello",
   "Hola",
   "Bonjour",
-  "你好",
-  "こんにちは",
   "Hallo",
-  "Привет",
   "Ciao",
-  "안녕하세요",
-  "أهلا",
-  "สวัสดี",
-  "Hallå",
-  "Hej",
   "Xin chào",
-  "Witam",
-  "Hei",
-  "שלום",
-  "γεια",
-  "Buna ziua",
-  "Helló",
-  "Ahoj",
-  "Zdravo",
-  "नमस्ते",
-  "Сәлеметсіз бе",
-  "Здравейте",
 ];
 
 const cardStack = [
   {
     id: 0,
-    alt: "A picture overlooking the river that makes Horseshoe Bend",
-    image: horseshoe,
+    alt: "A picture of the government complex",
+    image: plex,
   },
   {
     id: 1,
-    alt: "A picture of an empty mountain road in foggy conditions",
-    image: route243,
+    alt: "A picture of the government complex",
+    image: govtplex,
   },
   {
     id: 2,
@@ -111,7 +92,7 @@ function Hello(props: { index: number }) {
               {greetings[props.index]}.&nbsp;
             </motion.span>
           </AnimatePresence>
-          <motion.span>I&#39;m Rajbir.</motion.span>
+          <motion.span>I&#39;m Bill.</motion.span>
         </LayoutGroup>
       </h1>
     </header>
@@ -144,7 +125,7 @@ export default function Home(props: { chapters: Chapter[] }) {
   return (
     <>
       <Head>
-        <title>Rajbir Johar</title>
+        <title>Mayhem</title>
         <meta
           content="A brief overview of different aspects of my career"
           name="description"
@@ -159,15 +140,16 @@ export default function Home(props: { chapters: Chapter[] }) {
               priority
               quality={100}
               alt={
-                "A picture of me wearing a light grey beanie and a thick winter jacket. This was taken at Flagstaff."
+                "A picture of me."
               }
               className={css.profile}
             />
           </div>
           {render && <Hello index={index} />}
           <p>
-            Frontend and UX Engineer at Inventives. Crafting aesthetic
-            interfaces for mindblowing ideas.
+            Front-end Developer at Izyane, Google Cloud Developer at Mpelembe.
+            Crafting aesthetic interfaces for mindblowing ideas using React, Next.js,
+            Javascript/Typescript, Figma, and also working with Express.js, Node.js and Python.
           </p>
           <Link
             href="/about"
@@ -189,7 +171,7 @@ export default function Home(props: { chapters: Chapter[] }) {
         </Link>
       </div>
       <div className={css.section}>
-        <h2>Projects</h2>
+        <h2>Open Source</h2>
         <ListProjects />
         <Link href="/projects">
           <>
@@ -198,12 +180,12 @@ export default function Home(props: { chapters: Chapter[] }) {
         </Link>
       </div>
       <div className={css.section}>
-        <h2>Experiences</h2>
+        <h2>Gallery</h2>
         <div className={css.experiences}>
           <div>
             <ListExperiences />
             <Link
-              href="/experiences"
+              href="/Gallery"
               style={{
                 fontWeight: 550,
               }}

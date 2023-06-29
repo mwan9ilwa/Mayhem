@@ -33,7 +33,7 @@ export default function ListProjects(props: { all?: boolean }) {
   if (props.all) {
     return (
       <div className={css.section}>
-        <p>Open source for the world to see.</p>
+        <p>My public git repositories.</p>
         <div className={css.searchwrapper}>
           <IconSearch />
           <input

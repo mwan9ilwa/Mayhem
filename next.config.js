@@ -14,4 +14,11 @@ const nextConfig = {
   },
 };
 
+module.exports = {
+  env: {
+    NEXT_PUBLIC_SUPABASE_URL: 'https://your-supabase-url.com',
+    NEXT_PUBLIC_SUPABASE_ANON_KEY: 'your-supabase-anon-key',
+  },
+};
+
 module.exports = withContentlayer(nextConfig);

@@ -50,7 +50,7 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
   return (
     <>
       <Head>
-        <title>Rajbir Johar | Chapters</title>
+        <title>Services</title>
         <meta
           content="My thoughts on different topics relating to mainly developer experiences"
           name="description"
@@ -65,11 +65,11 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
           </Link>
         )}
         <h1>
-          Chapters {query && <span className={css.filtertag}>on {query}</span>}
+          My Services {query && <span className={css.filtertag}>on {query}</span>}
         </h1>
       </header>
       <div className={css.section}>
-        <p>Here is where I type at the speed of thought.</p>
+        <p>Services I specialize in.</p>
         <div className={css.searchwrapper}>
           <IconSearch />
           <input
@@ -83,8 +83,8 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
           />
         </div>
         <div className={css.history}>
-          <h3>Revisit</h3>
-          {Array.from(previousQueries)
+          <h3>All</h3>
+          {/* {Array.from(previousQueries)
             .slice(0, 10)
             .map((query) => (
               <Link
@@ -101,7 +101,7 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
               >
                 #{query}&nbsp;&nbsp;
               </Link>
-            ))}
+            ))} */}
         </div>
         <Chapters chapters={filteredChapters} />
       </div>

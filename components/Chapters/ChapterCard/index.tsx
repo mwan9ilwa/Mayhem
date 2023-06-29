@@ -17,17 +17,17 @@ export default function ChapterCard(props: {
         <header>
           <div className={css.heading}>
             <div className={css.badge}>{props.chapter.category}</div>
-            <div className={css.analytics}>
+            {/* <div className={css.analytics}>
               <span>
                 <IconEye className={css.icon} />
-                {props.views ? `${props.views}` : `–––`}
+                {props.views ? `${props.views}` : ``}
               </span>
               <Divider />
               <span>
                 <IconHeart className={css.icon} />{" "}
-                {props.likes ? `${props.likes}` : `–––`}
+                {props.likes ? `${props.likes}` : ``}
               </span>
-            </div>
+            </div> */}
           </div>
           <h3 className={css.title}>{props.chapter.title}</h3>
           <p className={css.description}>{props.chapter.description}</p>
@@ -36,17 +36,17 @@ export default function ChapterCard(props: {
           <ul className={css.tags}>
             {props.chapter.tags.map((tag: string) => (
               <li key={tag} className={css.tag}>
-                #{tag}
+                From{tag}
               </li>
             ))}
           </ul>
           <div className={css.link}>
             <span>
-              Read <IconArrowRight className={css.icon} strokeWidth={2.5} />
+              Explore <IconArrowRight className={css.icon} strokeWidth={2.5} />
             </span>
-            <time className={css.date} suppressHydrationWarning>
+            {/* <time className={css.date} suppressHydrationWarning>
               {format(date, "M.d.yyyy")}
-            </time>
+            </time> */}
           </div>
         </div>
       </article>
