@@ -12,9 +12,9 @@ export default function About() {
           <h1>Mwangilwa Zimba</h1>
 
           <p>
-            🚀 Hey there, I'm Mwangilwa, the visionary mind behind Quest, a
+            🚀 Hey there, I&rsquo;m Mwangilwa, the visionary mind behind Quest, a
             groundbreaking platform that's revolutionizing the developer
-            landscape. As an avid Google for Developers enthusiast, I'm
+            landscape. As an avid Google for Developers enthusiast, I&rsquo;m
             dedicated to empowering the community and driving the future of
             technology.
           </p>
@@ -30,15 +30,14 @@ export default function About() {
         <section>
           <h2>Other Things I Enjoy</h2>
           <p>
-            📷 When I'm not coding, I'm an intrepid explorer, capturing life's
+            📷 When I am not coding, I am an intrepid explorer, capturing life's
             beauty through the lens of my trusty Google Pixel. Adventures fuel
             my creativity, infusing every shot with a burst of enthusiasm and a
             touch of wanderlust.
           </p>
 
           <p>
-            🌄 Thrill-seeker at heart, I believe in embracing life's adventures
-            – from scaling mountains to embarking on unknown journeys. These
+            🌄 Thrill-seeker at heart, I believe in embracing life's adventures from scaling mountains to embarking on unknown journeys. These
             escapades shape my perspective and invigorate my work, resulting in
             truly exceptional solutions.
           </p>
