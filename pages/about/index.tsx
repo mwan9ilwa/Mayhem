@@ -12,8 +12,8 @@ export default function About() {
           <h1>Mwangilwa Zimba</h1>
 
           <p>
-            Hey there, I&apos;m Mwangilwa, the visionary mind behind Quest, a
-            groundbreaking platform that's revolutionizing the developer
+            Hey there, I am Mwangilwa, the visionary mind behind Quest, a
+            groundbreaking platform that is revolutionizing the developer
             landscape. As an avid Google for Developers enthusiast, I am
             dedicated to empowering the community and driving the future of
             technology.
@@ -30,7 +30,7 @@ export default function About() {
         <section>
           <h2>Other Things I Enjoy</h2>
           <p>
-            When I am not coding, I am an intrepid explorer, capturing life&apos;s
+            When I am not coding, I am an intrepid explorer, capturing lifes
             beauty through the lens of my trusty Google Pixel. Adventures fuel
             my creativity, infusing every shot with a burst of enthusiasm and a
             touch of wanderlust.

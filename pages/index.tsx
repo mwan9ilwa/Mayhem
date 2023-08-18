@@ -138,7 +138,7 @@ export default function Home(props: { chapters: Chapter[] }) {
           </div>
           {render && <Hello index={index} />}
           <p>
-            As an avid Google for Developers enthusiast, I&apos;m dedicated to
+            As an avid Google for Developers enthusiast, I am dedicated to
             empowering the community and driving the future of technology.
             With expertise as a MERN Stack Developer, I specialize in crafting
             seamless web experiences that fuse functionality with aesthetics. My
