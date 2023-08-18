@@ -1,15 +1,15 @@
 import Head from "next/head";
 import { format, parseISO } from "date-fns";
-import { Chapter, allChapters } from "contentlayer/generated";
+import { Service, allServices } from "contentlayer/generated";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import css from "./styles.module.css";
 import { IconArrowBarToLeft } from "@tabler/icons";
 import Link from "next/link";
 import { useState } from "react";
-import Views from "@/components/Chapters/Views";
+import Views from "@/components/Services/Views";
 import Signature from "@/components/Signature";
-import LikeButton from "../../components/Chapters/Likes/LikeButton/index";
+import LikeButton from "../../components/Services/Likes/LikeButton/index";
 import Divider from "@/components/Divider";
 
 // function MyButton() {
@@ -33,35 +33,35 @@ function MyButton() {
 }
 
 
-const PostLayout = ({ chapter }: { chapter: Chapter }) => {
-  const MDXContent = useMDXComponent(chapter.body.code);
+const PostLayout = ({ service }: { service: Service }) => {
+  const MDXContent = useMDXComponent(service.body.code);
 
   return (
     <>
       <Head>
-        <title>Mwangilwa | {chapter.title}</title>
-        <meta content={chapter.description} name="description" />
-        <meta property="article:published_time" content={chapter.date} />
-        <meta name="keywords" content={chapter.tags.toString()} />
-        <meta name="author" content={chapter.author} />
+        <title>Mwangilwa | {service.title}</title>
+        <meta content={service.description} name="description" />
+        <meta property="article:published_time" content={service.date} />
+        <meta name="keywords" content={service.tags.toString()} />
+        <meta name="author" content={service.author} />
       </Head>
-      <Link href={"/chapters"} className={css.link}>
+      <Link href={"/services"} className={css.link}>
         <>
           <IconArrowBarToLeft /> Index
         </>
       </Link>
-      <article className={css.chapter}>
+      <article className={css.service}>
         <header>
-          <p className={css.badge}>{chapter.category}</p>
-          <h1>{chapter.title}</h1>
+          <p className={css.badge}>{service.category}</p>
+          <h1>{service.title}</h1>
           {/* <p className={css.author}>
-            {chapter.author}
+            {service.author}
             <Divider />
-            <time dateTime={chapter.date} suppressHydrationWarning>
-              {format(parseISO(chapter.date), "LLLL d, yyyy")}
+            <time dateTime={service.date} suppressHydrationWarning>
+              {format(parseISO(service.date), "LLLL d, yyyy")}
             </time>
             <Divider />
-            <Views slug={chapter.slug} />
+            <Views slug={service.slug} />
           </p> */}
         </header>
         <hr />
@@ -69,22 +69,22 @@ const PostLayout = ({ chapter }: { chapter: Chapter }) => {
           <MDXContent components={{ MyButton }} />
         </div>
         {/* <div className={css.sticky}>
-          <LikeButton slug={chapter.slug} />
+          <LikeButton slug={service.slug} />
         </div> */}
         <hr />
         <footer>
           {/* <div className={css.signature}>
             <Signature />
-            <cite>— {chapter.author}</cite>
+            <cite>— {service.author}</cite>
           </div> */}
           <h4>Related</h4>
           <div className={css.tags}>
-            {chapter.tags.map((tag: string) => (
+            {service.tags.map((tag: string) => (
               <Link
                 key={tag}
                 className={css.tag}
                 href={{
-                  pathname: "/chapters",
+                  pathname: "/services",
                   query: { tag: tag },
                 }}
                 passHref
@@ -104,21 +104,21 @@ const PostLayout = ({ chapter }: { chapter: Chapter }) => {
 export default PostLayout;
 
 export async function getStaticProps(params: Params) {
-  const chapter: Chapter | undefined = allChapters.find((chapter: Chapter) => {
-    return chapter._raw.flattenedPath === params.params.slug;
+  const service: Service | undefined = allServices.find((service: Service) => {
+    return service._raw.flattenedPath === params.params.slug;
   });
 
   return {
     props: {
-      chapter: chapter,
+      service: service,
     },
   };
 }
 
 export async function getStaticPaths() {
-  const paths: string[] = allChapters
-    .filter((chapter) => chapter.draft === false)
-    .map((chapter: Chapter) => chapter.url);
+  const paths: string[] = allServices
+    .filter((service) => service.draft === false)
+    .map((service: Service) => service.url);
   return {
     paths,
     fallback: false,

@@ -1,22 +1,22 @@
 import Head from "next/head";
 import { compareDesc } from "date-fns";
 import css from "./styles.module.css";
-import { Chapter, allChapters } from "contentlayer/generated";
+import { Service, allServices } from "contentlayer/generated";
 import { pick } from "@contentlayer/client";
 import { useRouter } from "next/router";
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { IconArrowBarToLeft, IconSearch } from "@tabler/icons";
-import Chapters from "@/components/Chapters";
+import Services from "@/components/Services";
 
-export default function ChaptersPage(props: { chapters: Chapter[] }) {
+export default function ServicesPage(props: { services: Service[] }) {
   const router = useRouter();
   const query = router.query.tag ?? null;
   const [search, setSearch] = useState("");
   const [previousQueries, setPreviousQueries] = useState<Set<string>>(
     new Set()
   );
-  const filteredChapters: Chapter[] = props.chapters
+  const filteredServices: Service[] = props.services
     .filter(
       ({ tags }) =>
         query == null ||
@@ -58,7 +58,7 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
       </Head>
       <header>
         {query && (
-          <Link href={"/chapters"} className={css.link}>
+          <Link href={"/services"} className={css.link}>
             <>
               <IconArrowBarToLeft /> Index
             </>
@@ -92,7 +92,7 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
                 key={query}
                 className={css.tag}
                 href={{
-                  pathname: "/chapters",
+                  pathname: "/services",
                   query: { tag: query },
                 }}
                 passHref
@@ -103,19 +103,19 @@ export default function ChaptersPage(props: { chapters: Chapter[] }) {
               </Link>
             ))} */}
         </div>
-        <Chapters chapters={filteredChapters} />
+        <Services services={filteredServices} />
       </div>
     </>
   );
 }
 
 export async function getStaticProps() {
-  const chapters = allChapters
+  const services = allServices
     // Select only the fields needed to fill out the
     // cards for the journals
-    .filter((chapter) => chapter.draft === false)
-    .map((chapter) =>
-      pick(chapter, [
+    .filter((service) => service.draft === false)
+    .map((service) =>
+      pick(service, [
         "category",
         "title",
         "author",
@@ -130,5 +130,5 @@ export async function getStaticProps() {
       return compareDesc(new Date(a.date), new Date(b.date));
     });
 
-  return { props: { chapters } };
+  return { props: { services } };
 }

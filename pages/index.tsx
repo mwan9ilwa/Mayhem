@@ -2,13 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { compareDesc } from "date-fns";
-import { Chapter, allChapters } from "contentlayer/generated";
+import { Service, allServices } from "contentlayer/generated";
 import css from "@/styles/Home.module.css";
 import { IconArrowRight } from "@tabler/icons";
 import { AnimatePresence, LayoutGroup, motion, Variants } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useCallback } from "react";
-import Chapters from "@/components/Chapters";
+import Services from "@/components/Services";
 import ListExperiences from "@/components/Experiences";
 import Playing from "@/components/Music/Playing";
 import me from "@/public/static/images/me.jpg";
@@ -92,7 +92,7 @@ function Hello(props: { index: number }) {
   );
 }
 
-export default function Home(props: { chapters: Chapter[] }) {
+export default function Home(props: { services: Service[] }) {
   // Prevents a hydration error due to assigning
   // a random number to the index of the chosen
   // greeting.
@@ -157,9 +157,9 @@ export default function Home(props: { chapters: Chapter[] }) {
         </div>
       </div>
       <div className={css.section}>
-        <h2>Chapters</h2>
-        <Chapters chapters={props.chapters} />
-        <Link href="/chapters">
+        <h2>Services</h2>
+        <Services services={props.services} />
+        <Link href="/services">
           <>
             Discover <IconArrowRight />
           </>
@@ -209,8 +209,8 @@ export default function Home(props: { chapters: Chapter[] }) {
 }
 
 export async function getStaticProps() {
-  const chapters = allChapters.slice(0, 3).sort((a: Chapter, b: Chapter) => {
+  const services = allServices.slice(0, 3).sort((a: Service, b: Service) => {
     return compareDesc(new Date(a.date), new Date(b.date));
   });
-  return { props: { chapters } };
+  return { props: { services } };
 }

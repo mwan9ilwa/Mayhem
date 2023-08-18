@@ -1,18 +1,18 @@
-import { Chapter } from "contentlayer/generated";
-import ChapterCard from "./ChapterCard";
+import { Service } from "contentlayer/generated";
+import ServiceCard from "./ServiceCard";
 import useSWR from "swr";
 import css from "./styles.module.css";
 import fetcher from "@/lib/fetcher";
 
-export default function Chapters(props: { chapters: Chapter[] }) {
-  // Instead of fetching the views for each chapter within the card component,
+export default function Services(props: { services: Service[] }) {
+  // Instead of fetching the views for each service within the card component,
   // I call it in the parent so I won't have to make numerous calls as the number
   // of posts grow. I instead match it against the slug url and display accordingly.
   const { data } = useSWR<{
     data: { slug: string; views: number; likes: number }[];
   }>(`/api/views`, fetcher);
 
-  if (props.chapters.length === 0) {
+  if (props.services.length === 0) {
     return (
       <p>
         <em>
@@ -25,20 +25,20 @@ export default function Chapters(props: { chapters: Chapter[] }) {
   }
   return (
     <div className={css.grid}>
-      {props.chapters.map((chapter: Chapter, index: number) => (
-        <ChapterCard
+      {props.services.map((service: Service, index: number) => (
+        <ServiceCard
           key={index}
-          chapter={chapter}
+          service={service}
           views={
             data?.data.find(
               (views: { slug: string; views: number }) =>
-                views.slug === chapter.slug
+                views.slug === service.slug
             )?.views
           }
           likes={
             data?.data.find(
               (views: { slug: string; views: number }) =>
-                views.slug === chapter.slug
+                views.slug === service.slug
             )?.likes
           }
         />
