@@ -29,10 +29,10 @@ interface Featured {
 interface Project {
   title: string;
   stars: number;
-  pushed: Date;
+  pushed: string;
   url: string;
-  description?: string;
-  language?: string;
+  description: string;
+  language: string;
 }
 
 interface Track {
