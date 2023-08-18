@@ -39,7 +39,7 @@ export default function Footer() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={"https://www.twitter.com/mwan9ilwa_/"}
+                href={"https://www.twitter.com/mayhem_mgz/"}
               >
                 Twitter
               </a>
