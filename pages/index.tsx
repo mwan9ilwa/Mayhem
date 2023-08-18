@@ -18,14 +18,7 @@ import anthem from "@/public/static/images/me.jpg";
 import Stack from "@/components/Stack";
 import ListProjects from "@/components/Projects";
 
-const greetings = [
-  "Hello",
-  "Hola",
-  "Bonjour",
-  "Hallo",
-  "Ciao",
-  "Xin chào",
-];
+const greetings = ["Hello", "Hola", "Bonjour", "Hallo", "Ciao", "Xin chào"];
 
 const cardStack = [
   {
@@ -92,7 +85,7 @@ function Hello(props: { index: number }) {
               {greetings[props.index]}.&nbsp;
             </motion.span>
           </AnimatePresence>
-          <motion.span>I&#39;m Bill.</motion.span>
+          <motion.span>I&#39;m Mwangilwa.</motion.span>
         </LayoutGroup>
       </h1>
     </header>
@@ -139,17 +132,18 @@ export default function Home(props: { chapters: Chapter[] }) {
               src={me}
               priority
               quality={100}
-              alt={
-                "A picture of me."
-              }
+              alt={"A picture of me."}
               className={css.profile}
             />
           </div>
           {render && <Hello index={index} />}
           <p>
-            Front-end Developer at Izyane, Google Cloud Developer at Mpelembe.
-            Crafting aesthetic interfaces for mindblowing ideas using React, Next.js,
-            Javascript/Typescript, Figma, and also working with Express.js, Node.js and Python.
+            As an avid Google for Developers enthusiast, I'm dedicated to
+            empowering the community and driving the future of technology. 💻
+            With expertise as a MERN Stack Developer, I specialize in crafting
+            seamless web experiences that fuse functionality with aesthetics. My
+            code is my canvas, where I blend innovation and precision to bring
+            digital dreams to life.
           </p>
           <Link
             href="/about"

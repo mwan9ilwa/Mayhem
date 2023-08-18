@@ -27,7 +27,7 @@ function MyButton() {
 
   return (
     <a href={`mailto:${email}`} className={css.button}>
-      Click here to email me
+      Contact me
     </a>
   );
 }
