@@ -16,9 +16,25 @@ import {
 import { Experience } from "types/alpine";
 
 const experiences: Experience[] = [
+
+  {
+    title: "Founded Quest",
+    month: "August 2023",
+    year: 2023,
+    caption: <p>Put together a team for our freelance projects, calling it Quest. We're in search for Innovation.</p>,
+    icon: IconRoad,
+  },
+  {
+    title: "Frontend Developer at Izyane InovSolutions",
+    month: "April 2023",
+    year: 2023,
+    caption: <p>Started a new role as a Frontend Software Engineer at Izyane.</p>,
+    icon: IconBolt,
+  },
+
   {
     title: "Certified in Digital Marketing",
-    month: "March",
+    month: "March 2023",
     year: 2023,
     caption: <p>Finished my Digital Marketing certification with Google Digital Skills for Africa.</p>,
     icon: IconSchool,

@@ -22,7 +22,7 @@ function Menu(props: { onClick?: () => void }): JSX.Element {
   return (
     <>
       <Focused
-        href="/chapters"
+        href="/services"
         onClick={props.onClick}
         label="Navigate to the chapters page to read some of my writings."
       >
@@ -33,7 +33,7 @@ function Menu(props: { onClick?: () => void }): JSX.Element {
         onClick={props.onClick}
         label="Navigate to the projects page to learn more about my projects."
       >
-        GitHub
+        Projects
       </Focused>
 
       <Focused
@@ -41,7 +41,7 @@ function Menu(props: { onClick?: () => void }): JSX.Element {
         onClick={props.onClick}
         label="Navigate to the gallery page to view some of my photography."
       >
-        Timeline
+        Experience
       </Focused>
       <Focused
         href="/about"
