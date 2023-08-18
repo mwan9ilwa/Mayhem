@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className={inter.className}>
       <div className={css.footer}>
         <div className={css.content}>
-          <p>Thanks for visiting.</p>
+          <p>Connect with me.</p>
           <div className={css.grid}>
             <div className={css.links}>
               <a
@@ -46,13 +46,14 @@ export default function Footer() {
             </div>
             <div className={css.links}>
             <Link href="/about">About</Link>
-              <Link href="/chapters">Services</Link>
-              <Link href="/projects">Open Source</Link>
-              <Link href="/gallery">Gallery</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/projects">Projects</Link>
+              <Link href="/experiences">Experience</Link>
             </div>
             <div className={css.links}>
               <Link href="/music">Music</Link>
-              <Link href="/experiences">Resume</Link>
+              <Link href="/gallery">Gallery</Link>
+              <Link href="/snippets">Snippets</Link>
             </div>
           </div>
         </div>

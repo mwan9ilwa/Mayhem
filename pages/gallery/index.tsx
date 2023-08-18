@@ -31,15 +31,15 @@ export default function GalleryPage(props: { photos: Photo[] }) {
       <div className={css.section}>
         <p>
           Recently, I&#39;ve been trying to capture how I see the world.
-          Here&#39;s a glimpse through some of work. You can find more on my{" "}
+          Coming soon! While you wait, you can visit my{" "}
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={"https://www.instagram.com/mwan9ilwa_/"}
+            href={"https://www.instagram.com/mayhem_mgz/"}
           >
             Instagram
           </a>
-          .
+          for some stunning shots.
         </p>        
         <Expanded photo={selected} setPhoto={setSelected} />
         <Gallery photos={photos} setPhoto={setSelected} />

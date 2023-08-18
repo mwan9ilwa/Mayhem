@@ -5,10 +5,10 @@ export default function Snippets() {
   return (
     <>
       <Head>
-        <title>Mayhem | Resume</title>
+        <title>Mayhem</title>
       </Head>
       <header>
-        <h1>Resume</h1>
+        <h1>New Idea</h1>
         <p>
           Coming soon!...
         </p>
