@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 export default function Meta(props: { customMeta?: any }) {
   const router = useRouter();
   const meta = {
-    title: "Mwangilwa Zimba– Frontend Developer, Photographer, Explorer",
+    title: "Mwangilwa Zimba– Frontend Developer",
     description: `I'm a front-end/UX engineer and I strive to build things that people enjoy using.`,
     image: "https://pbs.twimg.com/profile_images/1722460270398709760/_5s8zkZk.jpg",
     type: "website",
