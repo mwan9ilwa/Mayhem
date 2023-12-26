@@ -35,7 +35,7 @@ export default function GalleryPage(props: { photos: Photo[] }) {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={"https://www.instagram.com/mayhem_mgz/"}
+            href={"https://www.instagram.com/_mz2303_/"}
           >
             Instagram
           </a>
