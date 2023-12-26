@@ -6,7 +6,7 @@ export default function Meta(props: { customMeta?: any }) {
   const meta = {
     title: "Mwangilwa Zimba– Frontend Developer, Photographer, Explorer",
     description: `I'm a front-end/UX engineer and I strive to build things that people enjoy using.`,
-    image: "https://rajbir.io/static/images/rajbir-banner.jpg",
+    image: "https://pbs.twimg.com/profile_images/1722460270398709760/_5s8zkZk.jpg",
     type: "website",
     ...props.customMeta,
   };
@@ -15,8 +15,8 @@ export default function Meta(props: { customMeta?: any }) {
       <title>{meta.title}</title>
       <meta name="robots" content="follow, index" />
       <meta content={meta.description} name="description" />
-      <meta property="og:url" content={`https://rajbir.io${router.asPath}`} />
-      <link rel="canonical" href={`https://rajbir.io${router.asPath}`} />
+      <meta property="og:url" content={`https://mwangilwa.io${router.asPath}`} />
+      <link rel="canonical" href={`https://mwangilwa.io${router.asPath}`} />
       <meta property="og:type" content={meta.type} />
       <meta property="og:site_name" content="Mwangilwa Zimba" />
       <meta property="og:description" content={meta.description} />
